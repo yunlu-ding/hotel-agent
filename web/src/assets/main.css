@@ -1,0 +1,62 @@
+/*
+ * 全局样式：只做三件事——清掉浏览器默认边距、让应用铺满视口、给出正文字体。
+ *
+ * 为什么这里要写这么长一段注释（这是踩过的坑）：
+ * 我最初沿用了参考项目带的 **Vite 起步模板 CSS**，它里面有两段模板样式：
+ *     #app { max-width: 1280px; margin: 0 auto; padding: 2rem; }
+ *     @media (min-width: 1024px) {
+ *       body { display: flex; place-items: center; }
+ *       #app { display: grid; grid-template-columns: 1fr 1fr; }
+ *     }
+ * 后果是整个应用被限宽到 1280 并居中、四周多出 2rem 内边距，
+ * **而且在宽屏下被塞进两列网格的左边一列**——页面看起来"不像一个正常网页"，
+ * 卡片头部的按钮还会被挤出可视区域（用户就是这么发现的）。
+ *
+ * 还有一条同样隐蔽的：模板里有 `*, *::before, *::after { font-weight: normal }`，
+ * 它会把 Element Plus 组件的加粗全部抹平。
+ *
+ * 结论：**模板样式是给模板用的**。正式页面要么删掉它，要么完全重写——
+ * 不要一边用组件库、一边留着模板的全局重置。
+ */
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'PingFang SC',
+    'Microsoft YaHei',
+    Roboto,
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #303133;
+  background: #f5f7fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 只清掉标题与段落的默认外边距，**不要**碰 font-weight，
+   也不要用通配符重置——那会连组件库的排版一起抹掉 */
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+code,
+pre {
+  font-family: Consolas, Monaco, 'Courier New', monospace;
+}

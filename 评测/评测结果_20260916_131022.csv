@@ -1,0 +1,27 @@
+suite,case_id,expected,actual,passed,latency_ms,note
+C,C1,room_service_agent,room_service_agent,True,1137,住中送物；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+C,C2,maintenance_agent,maintenance_agent,True,1134,普通故障；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+C,C3,maintenance_agent,maintenance_agent,True,9375,安全类故障也归报修；回答：已为您创建安全类紧急工单：   **工单号：WO260916826E59**   **承接部门：工程部（ENGINEER
+C,C4,room_service_agent,room_service_agent,True,1164,加床用品；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+C,C5,room_service_agent,room_service_agent,True,1107,叫醒服务；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+C,C6,handoff_agent,handoff_agent,True,1203,投诉硬触发；回答：非常抱歉给您带来不好的体验，我已经把这件事**交给真人处理**了。  - 🎫 工单号：**WO2609162EB03E*
+C,C7,policy_agent,policy_agent,True,7614,门店事实；回答：外滩璟悦酒店的早餐时间为：   - **周一至周五**：06:30 – 10:00   - **周末（周六、周日）**：
+C,C8,policy_agent,policy_agent,True,14999,集团政策；回答：根据《退改与取消政策.md》，酒店订单的退改政策如下（适用于通过本平台预订的国内酒店）：  ### 一、四种取消政策（以
+C,C9,order_agent,order_agent,True,1117,本人订单（入住中：房间级即可）；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+C,C10,recommendation_agent,recommendation_agent,True,11307,房型推荐；回答：您好！很高兴为您推荐适合亲子出行的房型 🌟   不过，为了给您精准匹配——比如**城市、入住/离店日期、预算范围、几大几
+C,C11,recommendation_agent,recommendation_agent,True,10362,住中客人问前段问题——不该被鉴权拦；回答：感谢您的信任！您提到“下个月还想来”，但目前我还不清楚：  - 您计划入住的具体**城市**（比如还是上海？还是其他城市
+C,C12,clarify_agent,clarify_agent,True,3023,超出服务范围；回答：这个问题超出了我的服务范围 🙏  我目前能处理的是这些事：查订单、讲清退改与发票规则、推荐酒店房型， 以及住中服务（送水
+C,C13,order_agent,order_agent,True,1139,入住前订单操作；回答：请提供**订单号**（形如 HT1001A001，可在预订确认短信或 App 里找到）。
+C,C14,policy_agent,policy_agent,True,11671,规则类问题；回答：根据酒店平台统一政策，发票开具规则如下：  ✅ **可开类型**：   - 默认开具**增值税电子普通发票**（适用于个
+C,C15,order_agent,order_agent,True,878,本人订单；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+C,C16,policy_agent,policy_agent,True,5456,规则询问（不是派人送）；回答：外滩璟悦酒店尚未在系统中登记加床相关政策（如是否提供加床、是否收费、费用标准等）。  建议您直接联系酒店前台确认，或在入
+C,C17,maintenance_agent,maintenance_agent,True,1062,设备故障；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+C,C18,maintenance_agent,maintenance_agent,True,863,网络故障；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+D,D1,SERVICE/HOUSEKEEPING/20,SERVICE/HOUSEKEEPING/20,True,10248,字段正确=True 闭环正确=True；工单=WO26091657D98D
+D,D2,SERVICE/HOUSEKEEPING/20,SERVICE/HOUSEKEEPING/20,True,6315,字段正确=True 闭环正确=True；工单=WO260916FB7E87
+D,D3,SERVICE/HOUSEKEEPING/20,SERVICE/HOUSEKEEPING/20,True,6140,字段正确=True 闭环正确=True；工单=WO26091690A04F
+D,D4,SERVICE/HOUSEKEEPING/20,SERVICE/HOUSEKEEPING/20,True,7231,字段正确=True 闭环正确=True；工单=WO260916427D61
+D,D5,MAINTENANCE/ENGINEERING/30,MAINTENANCE/ENGINEERING/30,True,6442,字段正确=True 闭环正确=True；工单=WO260916AD5C43
+D,D6,MAINTENANCE/ENGINEERING/30,MAINTENANCE/ENGINEERING/30,True,7635,字段正确=True 闭环正确=True；工单=WO2609165E48BD
+D,D7,MAINTENANCE_SAFETY/ENGINEERING/10,MAINTENANCE_SAFETY/ENGINEERING/10,True,8474,字段正确=True 闭环正确=True；工单=WO260916B343D8
+D,D8,COMPLAINT/DUTY_MANAGER/20,COMPLAINT/DUTY_MANAGER/20,True,1312,字段正确=True 闭环正确=True；工单=WO26091648973F

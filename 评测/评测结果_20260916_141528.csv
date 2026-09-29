@@ -1,0 +1,3 @@
+suite,case_id,expected,actual,passed,flaky,latency_ms,note
+C,C1,room_service_agent,room_service_agent,True,,952,住中送物；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+C,C2,maintenance_agent,maintenance_agent,True,,952,普通故障；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。

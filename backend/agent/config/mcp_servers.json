@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "hotel_service": {
+      "command": "D:\\丁云璐\\个人\\Agent 产品项目\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "mcp_servers.hotel_service_server"],
+      "cwd": "D:\\丁云璐\\个人\\Agent 产品项目\\hotel-agent\\backend\\agent",
+      "transport": "stdio"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+suite,case_id,expected,actual,passed,latency_ms,note
+E,E1-第1轮,has_work_order,has_work_order=✓,True,12098,验证一次后，后续请求不应再要求验证；追问工单要能查到；回答：已为您创建工单：**WO2609167CE894**，由客房部（HOUSEKEEPING）承接，预计**20分钟内送达*
+E,E1-第2轮,no_auth_required+mentions_previous_work_order,no_auth_required=✓+mentions_previous_work_order=✓,True,10916,验证一次后，后续请求不应再要求验证；追问工单要能查到；回答：您之前申请的2瓶矿泉水，工单 **WO2609167CE894** 已派发至客房部（HOUSEKEEPING），当前状态
+E,E1-第3轮,has_work_order,has_work_order=✓,True,9159,验证一次后，后续请求不应再要求验证；追问工单要能查到；回答：已为您创建工单：**WO260916C64E59**，由客房部（HOUSEKEEPING）承接，预计**20分钟内送达*
+E,E2-第1轮,no_auth_required,no_auth_required=✓,True,8753,公开信息连续追问，全程不该触发鉴权；回答：外滩璟悦酒店的早餐时间是： - 周一至周五：06:30–10:00   - 周末（周六、周日）：06:30–10:30 
+E,E2-第2轮,no_auth_required,no_auth_required=✓,True,8992,公开信息连续追问，全程不该触发鉴权；回答：外滩璟悦酒店的泳池开放时间为：**07:00–22:00**，位于酒店**8楼室内恒温泳池**。  该信息由门店自行设定
+E,E2-第3轮,no_auth_required,no_auth_required=✓,True,12872,公开信息连续追问，全程不该触发鉴权；回答：您好！很高兴为您推荐亲子友好型房型 🌟   不过目前您还没有提供以下关键信息，我需要先确认，才能精准筛选：  - **城
+E,E3-第1轮,auth_required,auth_required=✓,True,1606,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+E,E3-第2轮,auth_collecting,auth_collecting=✓,True,999,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：谢谢，请告诉我**入住人姓氏**（只填姓即可，例如：陈）。
+E,E3-第3轮,auth_collecting,auth_collecting=✓,True,897,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：最后确认一下，您的**离店日期**是哪天？（例如 9月18日 或 2026-09-18）
+E,E3-第4轮,no_auth_required+has_work_order,no_auth_required=✓+has_work_order=✓,True,9350,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：已确认您是 1208 房的住客（离店日 2026-09-18）。  已为您创建工单：**WO260916A4759F**
+E,E3-第5轮,no_auth_required+has_work_order,no_auth_required=✓+has_work_order=✓,True,8814,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：已为您创建工单：**WO260916C944AF**   承接部门：客房部（HOUSEKEEPING）   预计20分钟
+E,E4-第1轮,has_work_order,has_work_order=✓,True,9073,工单状态可回查；回答：已为您创建房间清洁工单，工单号：WO26091669CB29，由客房部（HOUSEKEEPING）承接，预计20分钟内（
+E,E4-第2轮,mentions_previous_work_order,mentions_previous_work_order=✓,True,4525,工单状态可回查；回答：您之前已创建过房间清洁工单，工单号是：**WO26091669CB29**。   如需查询当前进度，我可立即为您查看。是

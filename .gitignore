@@ -1,0 +1,20 @@
+# 环境与密钥
+backend/agent/.env
+backend/.env
+
+# 运行产物
+logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# 前端
+web/node_modules/
+web/dist/
+
+# 系统
+.DS_Store
+Thumbs.db

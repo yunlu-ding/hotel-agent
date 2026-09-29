@@ -1,0 +1,5 @@
+suite,case_id,expected,actual,passed,flaky,latency_ms,note
+G,G1-延退多跳,产生 CHECKOUT_REQUEST 工单，且结论基于房态,工单=WO26091658BA84 类别=CHECKOUT_REQUEST,True,,52649,回答：✅ 您的延退申请已成功提交！    - **工单号**：WO26091658BA84   - **申请内容**：将房间 **1208** 的退房日期由 **20
+G,G2-换房,产生 CHECKOUT_REQUEST 工单，且结论基于房态,工单=WO260916844333 类别=CHECKOUT_REQUEST,True,,30615,回答：已为您成功提交换房申请！    🔹 **工单号**：WO260916844333   🔹 **受理部门**：前台（FRONT_DESK）   🔹 **处理时限*
+G,G3-超时升级,超时工单被升级为 ESCALATED 且事件链含 ESCALATED,"状态=ESCALATED 事件=['CREATED', 'ASSIGNED', 'ESCALATED']",True,,0,超时升级必须自己发生，不能只靠人工点
+G,G4-记忆不污染,入住级信息（门店/房间/订单）不得进入会员长期记忆,"落库=[('偏好', '偏好安静楼层')] 读回=['偏好: 偏好安静楼层']",True,,0,第 15 轮踩过的坑：门店被当成偏好跨会话注入，会覆盖系统注入的门店

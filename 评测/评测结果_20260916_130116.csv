@@ -1,0 +1,22 @@
+suite,case_id,expected,actual,passed,latency_ms,note
+E,E1-第1轮,has_work_order,has_work_order=✓,True,12280,验证一次后，后续请求不应再要求验证；追问工单要能查到；回答：已为您创建工单：**WO260916A79E2B**   承接部门：客房部（HOUSEKEEPING）   预计20分钟
+E,E1-第2轮,no_auth_required+mentions_previous_work_order,no_auth_required=✓+mentions_previous_work_order=✓,True,10855,验证一次后，后续请求不应再要求验证；追问工单要能查到；回答：您刚才申请的两瓶矿泉水，工单号 **WO260916A79E2B** 已派单至客房部（HOUSEKEEPING），当前状
+E,E1-第3轮,has_work_order,has_work_order=✓,True,9158,验证一次后，后续请求不应再要求验证；追问工单要能查到；回答：已为您创建工单：**WO2609167CBA2D**   承接部门：客房部（HOUSEKEEPING）   预计20分钟
+E,E2-第1轮,no_auth_required,no_auth_required=✓,True,7770,公开信息连续追问，全程不该触发鉴权；回答：外滩璟悦酒店的早餐时间为：   - **周一至周五**：06:30 – 10:00   - **周末（周六、周日）**：
+E,E2-第2轮,no_auth_required,no_auth_required=✓,True,8616,公开信息连续追问，全程不该触发鉴权；回答：外滩璟悦酒店的泳池开放时间为：   **07:00 – 22:00**（位于8楼的室内恒温泳池）    该信息由门店自行
+E,E2-第3轮,no_auth_required,no_auth_required=✓,True,14957,公开信息连续追问，全程不该触发鉴权；回答：您好！很高兴为您推荐亲子友好型房型 😊   不过目前您还没有提供具体的城市、入住日期、预算或同行人数等关键信息，而亲子房
+E,E3-第1轮,auth_required,auth_required=✓,True,1988,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：好的，为了确认您的住客身份，请告诉我**房间号**（例如 1208）。
+E,E3-第2轮,auth_collecting,auth_collecting=✓,True,1126,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：谢谢，请告诉我**入住人姓氏**（只填姓即可，例如：陈）。
+E,E3-第3轮,auth_collecting,auth_collecting=✓,True,879,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：最后确认一下，您的**离店日期**是哪天？（例如 9月18日 或 2026-09-18）
+E,E3-第4轮,no_auth_required+has_work_order,no_auth_required=✓+has_work_order=✓,True,9606,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：已确认您是 1208 房的住客（离店日 2026-09-18）。  已为您创建工单：**WO260916475ECA**
+E,E3-第5轮,no_auth_required+has_work_order,no_auth_required=✓+has_work_order=✓,True,9218,逐槽位验证：验证通过后**不得重复问房间信息**（跨阶段不重复描述）；回答：已为您创建工单：**WO2609163BA350**   承接部门：客房部（HOUSEKEEPING）   预计送达时间
+E,E4-第1轮,has_work_order,has_work_order=✓,True,9410,工单状态可回查；回答：已为您创建房间清洁工单，工单号：**WO260916E0281B**，由**客房部（HOUSEKEEPING）** 承接
+E,E4-第2轮,mentions_previous_work_order,mentions_previous_work_order=✓,True,8563,工单状态可回查；回答：您刚才申请的房间清洁工单号是：**WO260916E0281B**，已派单至**客房部（HOUSEKEEPING）**，
+D,D1,SERVICE/HOUSEKEEPING/20,SERVICE/HOUSEKEEPING/20,True,8837,字段正确=True 闭环正确=True；工单=WO2609168AC3BF
+D,D2,SERVICE/HOUSEKEEPING/20,SERVICE/HOUSEKEEPING/20,True,8690,字段正确=True 闭环正确=True；工单=WO260916A79789
+D,D3,SERVICE/HOUSEKEEPING/20,SERVICE/HOUSEKEEPING/20,True,8731,字段正确=True 闭环正确=True；工单=WO260916EE45E7
+D,D4,SERVICE/HOUSEKEEPING/20,SERVICE/HOUSEKEEPING/20,True,8273,字段正确=True 闭环正确=True；工单=WO2609162AE68F
+D,D5,MAINTENANCE/ENGINEERING/30,MAINTENANCE/ENGINEERING/30,True,9064,字段正确=True 闭环正确=True；工单=WO260916B5FD8C
+D,D6,MAINTENANCE/ENGINEERING/30,MAINTENANCE/ENGINEERING/30,True,9613,字段正确=True 闭环正确=True；工单=WO260916B9F832
+D,D7,MAINTENANCE_SAFETY/ENGINEERING/10,MAINTENANCE_SAFETY/ENGINEERING/10,True,12340,字段正确=True 闭环正确=True；工单=WO2609168340A8
+D,D8,COMPLAINT/DUTY_MANAGER/20,COMPLAINT/DUTY_MANAGER/20,True,2539,字段正确=True 闭环正确=True；工单=WO2609161E1314
